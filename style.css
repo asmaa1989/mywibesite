@@ -1,214 +1,234 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-header{
-    background-color: #f0f0f0;
+html {
+    font-size: 10px;
+    font-family:  'Poppins', sans-serif;
+}
+body{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: rgb(246, 5, 182);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+header {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 10px 0 10px 13%;
+width: 29%;
+height: 100%;
+position: fixed;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    position: fixed;
-    z-index: 999;
+    height: 70%;
+    justify-content: space-between;
+}
+.nav-links a {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 8px 25px 8px 8px;
+    width: fit-content;
+}
+.nav-links a i {
+    font-size: 3rem;
+    margin-right: 15px;
+}
+
+.nav-links a:hover {
+    background-color: aliceblue;
+    border-radius: 9999px;
+
+}
+.nav-links a:first-child {
+    padding: 8px 8px;
+}
+.nav-links a:first-child i {
+    margin: 0;
+}
+.tweet-button {
+    background-color:rgb(246, 5, 182);
+    width: 90%;
+    height: 55px;
+    border-radius: 9999px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: aliceblue;
+    font-weight: 700;
+    border: 1px solid white;
+    transition-duration: 0.2s;
+}
+.tweet-button:hover {
+    background-color:rgba(246, 5, 182,0.8);
+}
+main {
+    width: 71%;
+    height: 100%;
+    margin-left: 29%;
+}
+.main-flex {
+    display: flex;
+    width: 100%;
+}
+.main-feed {
+    width: 50%;
+    border-left: 1px solid aliceblue;
+    border-right: 1px solid aliceblue;;
+}
+.home-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 55px;
+   width: 100%;
+   color: rgb(246, 5, 182);
+   font-size: 2rem;
+   font-weight: 400;
+   padding: 0 15px;
+   position: sticky;
+   top: 0;
+   background-color: aliceblue;
+   
+}
+.new-tweet{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    padding: 4px 16px;
+    flex-direction: column;
+}
+.tweet-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 4px;
+    width: 100%;
+    /* margin-left: 12px; */
+    height: 300px;
+}
+.user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 4px;
+    width: 100%;
+    margin-left: 12px; 
+}
+.new-tweet-actions{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px;
-
-}
-.logo{
-    text-decoration: none;
-    color: #3a6cf4;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.8em;
-}
-.navigation a{ 
-    color: #3a6cf4;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding-left: 30px;
-
-
-}
-.navigation a:hover{
-    color: #601cfc;
-}
-section{
-    padding: 100px 200px;
-}
-.main {
+    height: 60px;
     width: 100%;
-    min-height: 100vh;
+}
+.new-tweet-actions ul {
     display: flex;
-    align-items: center;
-    background: url(img/black-background.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    list-style: none;
 }
-.main h2 {
-    color: #fff;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-.main h2 span {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4e9eff;
-    font-size: 3em;
-    font-weight: 600;
-}
-.main h3 {
-    color: #fff;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 1.7em;
-    padding-right: 30px;
-}
-.title {
-    display: flex;
-    justify-content: center;
-    color: #3a6cf4;
-    font-size: 2.2em;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: #fff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.7s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card .icon {
-    color: #3a6cf4;
-    font-size: 8em;
-    text-align: center;
-}
-.info {
-    text-align: center;
-}
-
-.info h3{
-    color: #3a6cf4;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 10px;
-}
-.img{
-    padding: 5px;
-        height: 225px;
-        width: 225px;
-        border: 2px solid gray;
-        box-shadow: 2px 4px #888888;
+.tweet-details input {
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    border: none;
+    color: rgb(246, 5, 182);
+    outline: none;
 
 }
-.contact .icon{
-    font-size: 4.5em;
+.user-name input {
+    width: 100%;
+    height: 50px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    border: none;
+    color: rgb(246, 5, 182);
+    outline: none;
 }
-
-.contact .info h3 {
-    color: #000;
+.new-tweet-actions ul li {
+    margin-right: 12px;
+    color: rgb(246, 5, 182);
+    cursor: pointer;
 }
-
-.contact .info p {
-    font-size: 1em;
+.click {
+    width: 75px;
+    height: 35px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    background-color:rgb(246, 5, 182);
+    border-radius: 9999px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: aliceblue;
+    font-weight: 400;
+    border: 1px solid white;
+    transition-duration: 0.2s;
 }
-.footer {
-    background-color: #000016;
-    color: #fff;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
+.click:hover {
+    background-color:rgba(246, 5, 182,0.8);
 }
-
-.footer-title {
-    font-size: 1.3em;
-    font-weight: 600;
+.side-feed {
+    width: 50%;
+    border-left: 1px solid aliceblue;
+    border-right: 1px solid aliceblue;;
+    /* background-color: aliceblue; */
+  
 }
-
-.footer-title span {
-    color: #3a6cf4;
+.news-feed {
+    /* width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+    font-size: 2rem;
+    border: none;
+    color: rgb(246, 5, 182);
+    outline: none; */
+    padding: 15px;
+    background-color: aliceblue;
 }
-
-.footer .social-icons a{
-    font-size: 1.3em;
-    padding: 0 12px 0 0;
+.side-feed .news-feed .no-news-feed {
+    color: rgb(246, 5, 182);
+    font-size: 25px;
 }
-@media (max-width:1023px){
-    header{
-        padding: 12px 20px;
-    }
-
-    .navigation a{
-        padding-left:1px;
-    }
-
-    .title{
-        font-size: 1.8em;
-    }
-
-    section{
-        padding: 80px 20px;
-    }
-
-    .main-content h2{
-        font-size: 1em;
-    }
-
-    .main-content h3{
-        font-size: 1.6em;
-    }
-
-    .content{
-        flex-direction: column;
-        align-items: center;
-    }
-
+.side-feed .news-feed >span {
+    display: block;
+    background-color: white;
+    padding: 10px;
 }
-@media (max-width:641px){
-    body{
-        font-size: 12px;
-    }
-
-    .main-content h2{
-        font-size: 0.8em;
-    }
-
-    .main-content h3{
-        font-size: 1.4em;
-    }
+.side-feed .news-feed >span:not(last-child){
+    margin-bottom: 10px;
 }
-
-@media (max-width:300px){
-    body{
-        font-size: 10px;
-     
-    }
+.side-feed .news-feed .feed-box .like {
+    float: right;
+    background-color: rgb(246, 5, 182);
+    padding: 4px 10px;
+    color: aliceblue;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.side-feed .news-feed .feed-box .re-publish {
+    float: right;
+    background-color: rgb(246, 5, 182);
+    padding: 4px 10px;
+    color: aliceblue;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 2rem;
 }
